@@ -86,6 +86,6 @@
     
 <h2>License</h2>
 
-    詳細請參閱 [LICENSE][4]
+   詳細請參閱 [LICENSE][4]
 
 [4]: https://github.com/b0543028/get-field-contour/blob/master/LICENSE
