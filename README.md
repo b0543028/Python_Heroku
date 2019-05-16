@@ -1,4 +1,4 @@
-# 取得稻田中稻子的平均長度
+# 將Python腳本部屬到Heroku
 
 **NOTE:** 這邊並不會針對輪廓偵測的部份去做解釋，主要介紹如何部屬heroku
 
@@ -26,4 +26,62 @@
     heroku git:clone -a your-app-name
     cd /path/your-app-name
     ```
+    
+   這時電腦中會出現clone下來的資料夾
    
+<h3>資料準備</h3>
+
+將以下檔案丟入clone下來的資料夾中，如果程式中有使用到其他檔案也要記得丟進來
+
+1. requirements.txt
+
+   在python中import套件要寫進requirments.txt裡
+   可開啟cmd輸入
+   
+    ```
+    pip freeze
+    ```
+    
+   查詢套件版本
+   
+2. Procfile
+
+   >注意後面不能有.txt
+   
+   檔案中輸入<process type>: <command>
+    
+   這邊使用的是process type 為 worker
+   
+    ```
+    worker: python python檔name.py
+    ```
+    
+3. xxx.py
+
+   將寫好的python腳本丟入資料夾中
+   
+<h3>push到伺服器</h3>
+
+1. cmd中輸入
+
+    ```
+    git add .
+    git commit -am "make it better"
+    git push heroku master
+    ```
+    
+    上述操作都沒問題的話，應該會順利將檔案push到heroku上
+    
+2. 執行worker
+    
+    ```
+    heroku ps:scale worker=1
+    ```
+    
+3. 查看logs
+
+    ```
+    heroku logs --tail
+    ```
+    
+<h2>LICENSE</h2>
