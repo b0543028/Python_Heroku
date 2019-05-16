@@ -32,7 +32,7 @@
 5. 若已經有準備好的資料夾，直接輸入
 
      ```
-    heroku git: -a your-app-name
+    heroku git:remote -a your-app-name
     ```
    
 <h3>資料準備</h3>
