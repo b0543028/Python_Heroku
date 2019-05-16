@@ -81,6 +81,8 @@
 2. 執行worker
     
     ```
+    cd /path/folder
+    git init
     heroku ps:scale worker=1
     ```
     
