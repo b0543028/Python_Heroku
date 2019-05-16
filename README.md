@@ -31,7 +31,9 @@
    
 5. 若已經有準備好的資料夾，直接輸入
 
-     ```
+    ```
+    cd /path/folder
+    git init
     heroku git:remote -a your-app-name
     ```
    
@@ -81,8 +83,6 @@
 2. 執行worker
     
     ```
-    cd /path/folder
-    git init
     heroku ps:scale worker=1
     ```
     
