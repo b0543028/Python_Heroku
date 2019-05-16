@@ -84,4 +84,8 @@
     heroku logs --tail
     ```
     
-<h2>LICENSE</h2>
+<h2>License</h2>
+
+詳細請參閱 [LICENSE][4]
+
+[4]: 
